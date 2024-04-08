@@ -1,1 +1,6 @@
-/*# sourceMappingURL=home.css.map */
+.home {
+  display: flex;
+}
+.home .homeContainer {
+  flex: 6;
+}/*# sourceMappingURL=home.css.map */
