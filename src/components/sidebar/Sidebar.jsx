@@ -20,33 +20,33 @@ const Sidebar = () => {
         <ul>
           <p className="title">MAIN</p>
           <li>
-            <DashboardIcon className="icon"/>
+            <DashboardIcon className="icon" />
             <span>Dashboard</span>
           </li>
           <p className="title">LIST</p>
           <Link to="/users">
             <li>
-              <PersonIcon className="user"/>
+              <PersonIcon className="user" />
               <span>Users</span>
             </li>
           </Link>
           <Link to="/products">
             <li>
-              <ProductionQuantityLimitsIcon className="product"/>
+              <ProductionQuantityLimitsIcon className="product" />
               <span>Products</span>
             </li>
           </Link>
           <li>
-            <AddBusinessIcon className="orders"/>
+            <AddBusinessIcon className="orders" />
             <span>Orders</span>
           </li>
           <p className="title">USER</p>
           <li>
-            <AccountCircleIcon className="profile"/>
+            <AccountCircleIcon className="profile" />
             <span>Profile</span>
           </li>
           <li>
-            <LogoutIcon className="logout"/>
+            <LogoutIcon className="logout" />
             <span>Logout</span>
           </li>
         </ul>
