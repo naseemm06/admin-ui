@@ -76,53 +76,34 @@ const rows = [{
     ,
 ];
 
-/*const actionColumn = [
-  {
-    field: "action",
-    headerName: "Action",
-    width: 200,
-    renderCell: () => {
-      return (
-        <div className="cellAction">
-          <Link to="/categories/test" style={{ textDecoration: "none" }}>
-            <div className="viewButton">View</div>
-          </Link>
-        </div>
-      );
-    },
-  },
-];*/
 
 const Mydatatable = () => {
-    return (<div className="mydatatable" > <div className="mydatatableTitle" > All Data </div> <DataGrid rows={
-        rows
-    }
+    // Assuming rows and columns are defined elsewhere in your code
+    const pageSizeOptions = [5, 10];
+    const initialState = {
+        pagination: {
+            paginationModel: {
+                page: 0,
+                pageSize: pageSizeOptions[0] // Set the initial pageSize to the first option
+            },
+        },
+    };
 
-        columns={
-            columns.concat()
-        }
+    return (
+        <div className="mydatatable">
+            <div className="mydatatableTitle">All Data</div>
+            <DataGrid
+                rows={rows}
+                columns={columns.concat()}
+                initialState={initialState}
+                pageSizeOptions={pageSizeOptions}
+                checkboxSelection
+            />
+        </div>
+    );
+};
 
-        initialState={
-            {
-                pagination: {
-                    paginationModel: {
-                        page: 0, pageSize: 5
-                    }
 
-                    ,
-                }
-
-                ,
-            }
-        }
-
-        pageSizeOptions={
-            [5, 10]
-        }
-
-        checkboxSelection /> </div>);
-}
-
-    ;
+;
 
 export default Mydatatable;
