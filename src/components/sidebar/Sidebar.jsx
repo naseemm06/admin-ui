@@ -1,11 +1,12 @@
 import "./sidebar.scss";
 import { Link } from "react-router-dom";
 import DashboardIcon from '@mui/icons-material/Dashboard';
-import PersonIcon from '@mui/icons-material/Person';
-import ProductionQuantityLimitsIcon from '@mui/icons-material/ProductionQuantityLimits';
-import AddBusinessIcon from '@mui/icons-material/AddBusiness';
+import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
+import InventoryIcon from '@mui/icons-material/Inventory';
+import StoreIcon from '@mui/icons-material/Store';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import LogoutIcon from '@mui/icons-material/Logout';
+import CategoryIcon from '@mui/icons-material/Category';
 
 const Sidebar = () => {
   return (
@@ -26,27 +27,33 @@ const Sidebar = () => {
           <p className="title">LIST</p>
           <Link to="/users">
             <li>
-              <PersonIcon className="user" />
+              <PersonOutlineIcon className="icon" />
               <span>Users</span>
             </li>
           </Link>
           <Link to="/products">
             <li>
-              <ProductionQuantityLimitsIcon className="product" />
+              <InventoryIcon className="icon" />
               <span>Products</span>
             </li>
           </Link>
           <li>
-            <AddBusinessIcon className="orders" />
+            <StoreIcon className="icon" />
             <span>Orders</span>
           </li>
+          <Link to="/categories">
+            <li>
+              <CategoryIcon className="icon" />
+              <span>Categories</span>
+            </li>
+          </Link>
           <p className="title">USER</p>
           <li>
-            <AccountCircleIcon className="profile" />
+            <AccountCircleIcon className="icon" />
             <span>Profile</span>
           </li>
           <li>
-            <LogoutIcon className="logout" />
+            <LogoutIcon className="icon" />
             <span>Logout</span>
           </li>
         </ul>
