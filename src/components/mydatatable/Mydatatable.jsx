@@ -21,27 +21,21 @@ const rows = [
 ];
 
 
-
 const Mydatatable = () => {
-    // Assuming rows and columns are defined elsewhere in your code
-    const pageSizeOptions = [5, 10];
-    const initialState = {
-        pagination: {
-            paginationModel: {
-                page: 0,
-                pageSize: pageSizeOptions[0] // Set the initial pageSize to the first option
-            },
-        },
-    };
-
     return (
         <div className="mydatatable">
-            <div className="mydatatableTitle">All Data</div>
+            <div className="mydatatableTitle">
+                All Data
+            </div>
             <DataGrid
                 rows={rows}
                 columns={columns.concat()}
-                initialState={initialState}
-                pageSizeOptions={pageSizeOptions}
+                initialState={{
+                    pagination: {
+                        paginationModel: { page: 0, pageSize: 5 },
+                    },
+                }}
+                pageSizeOptions={[5, 10]}
                 checkboxSelection
             />
         </div>
