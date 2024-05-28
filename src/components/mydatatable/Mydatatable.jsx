@@ -1,48 +1,41 @@
 import "./mydatatable.scss";
 import { DataGrid } from "@mui/x-data-grid";
-import { Link } from "react-router-dom";
 
 const columns = [
-    { field: "id", headerName: "ID", width: 70 },
-    { field: "cateName", headerName: "Name", width: 130 },
+  { field: "id", headerName: "ID", width: 70 },
+  { field: "name", headerName: "Name", width: 130 },
 ];
 
 const rows = [
-    { id: 1, cateName: "Coffee" },
-    { id: 2, cateName: "Non Coffee" },
-    { id: 3, cateName: "Cake" },
-    { id: 4, cateName: "Pastry" },
-    { id: 5, cateName: "Cookie" },
-    { id: 6, cateName: "Coffee" },
-    { id: 7, cateName: "Non Coffee" },
-    { id: 8, cateName: "Cake" },
-    { id: 9, cateName: "Pastry" },
-    { id: 10, cateName: "Cookie" },
+  { id: 1, name: "Coffee" },
+  { id: 2, name: "Non Coffee" },
+  { id: 3, name: "Cake" },
+  { id: 4, name: "Pastry" },
+  { id: 5, name: "Cookie" },
+  { id: 6, name: "Candy" },
+  { id: 7, name: "Rice" },
+  { id: 8, name: "Pasta" },
+  { id: 9, name: "Salad" },
+  { id: 10, name: "Steak" },
 ];
 
-
-const Mydatatable = () => {
-    return (
-        <div className="mydatatable">
-            <div className="mydatatableTitle">
-                All Data
-            </div>
-            <DataGrid
-                rows={rows}
-                columns={columns.concat()}
-                initialState={{
-                    pagination: {
-                        paginationModel: { page: 0, pageSize: 5 },
-                    },
-                }}
-                pageSizeOptions={[5, 10]}
-                checkboxSelection
-            />
-        </div>
-    );
+const MyDatatable = ({ title }) => {
+  return (
+    <div className="myDatatable">
+      <div className="myDatatableTitle">{title}</div>
+      <DataGrid
+        rows={rows}
+        columns={columns}
+        initialState={{
+          pagination: {
+            paginationModel: { page: 0, pageSize: 5 },
+          },
+        }}
+        pageSizeOptions={[5, 10]}
+        checkboxSelection
+      />
+    </div>
+  );
 };
 
-
-;
-
-export default Mydatatable;
+export default MyDatatable;

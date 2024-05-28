@@ -16,7 +16,7 @@ const Single = () => {
             <h1 className="title">Information</h1>
             <div className="item">
               <img
-                src="https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+                src="https://media.licdn.com/dms/image/D5603AQG1yFgaj_McQw/profile-displayphoto-shrink_400_400/0/1713620668235?e=1722470400&v=beta&t=2yxx2hTpCaczsyOvxzHiRXeU_O9uTmFQF6lkXjBBxs8"
                 alt=""
                 className="itemImg"
               />
@@ -51,8 +51,8 @@ const Single = () => {
           <h1 className="title">Last Transactions</h1>
           <List />
         </div>
-      </div >
-    </div >
+      </div>
+    </div>
   );
 };
 
